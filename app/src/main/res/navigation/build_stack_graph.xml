@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/build_stack_graph"
+    app:startDestination="@id/buildStackLoadFragment">
+
+    <fragment
+        android:id="@+id/buildStackLoadFragment"
+        android:name="com.buidlstack.stacksubil.grfed.presentation.ui.load.BuildStackLoadFragment"
+        android:label="BuildStackLoadFragment" >
+        <action
+            android:id="@+id/action_buildStackLoadFragment_to_buildStackV"
+            app:destination="@id/buildStackV"
+            app:popUpTo="@id/build_stack_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/buildStackV"
+        android:name="com.buidlstack.stacksubil.grfed.presentation.ui.view.BuildStackV"
+        android:label="BuildStackV" />
+</navigation>

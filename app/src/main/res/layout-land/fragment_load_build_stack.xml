@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/buildStackBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/build_stack_back" />
+
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/buildStackLoadingGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="buildStackProgress, buildStackProgressText" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/buildStackStateGroup"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:constraint_referenced_ids="buildStackConnectionState" />
+
+    <ImageView
+        android:id="@+id/buildStackProgressText"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/buildStackProgress"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/build_stack_loadi" />
+
+    <ProgressBar
+        android:id="@+id/buildStackProgress"
+        android:layout_width="152dp"
+        android:layout_height="149dp"
+        android:indeterminateTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7" />
+
+
+    <ImageView
+        android:id="@+id/buildStackConnectionState"
+        android:layout_width="0dp"
+        android:layout_height="251dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        app:srcCompat="@drawable/build_stack_state" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/buildStackNotiGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="buildStackNotifText,buildStackGrandButton,buildStackSkipButton,buildStackNotifText2,buildStackNotiBack" />
+
+    <ImageView
+        android:id="@+id/buildStackNotiBack"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/buildStackBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/build_stack_land_noti_back" />
+
+
+    <TextView
+        android:id="@+id/buildStackNotifText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="31dp"
+        android:layout_marginBottom="4dp"
+        android:fontFamily="@font/inter_bold"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="Allow notifications about bonuses and promos"
+        android:textColor="@color/white"
+        android:textSize="31sp"
+        app:layout_constraintBottom_toTopOf="@+id/buildStackNotifText2"
+        app:layout_constraintEnd_toStartOf="@+id/buildStackGrandButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buildStackBackground"
+        app:layout_constraintStart_toStartOf="parent"
+        app:lineHeight="35dp" />
+
+    <Button
+        android:id="@+id/buildStackGrandButton"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/build_stack_btn"
+        android:fontFamily="@font/inter_bold"
+        android:text="Yes, I Want Bonuses!"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@+id/buildStackSkipButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buildStackNotifText" />
+
+    <Button
+        android:id="@+id/buildStackSkipButton"
+        android:layout_width="0dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="11dp"
+        android:background="@drawable/build_stack_skip"
+        android:fontFamily="@font/inter_bold"
+        android:gravity="center"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="Skip"
+        android:textColor="#B3FFFFFF"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/buildStackGrandButton"
+        app:layout_constraintStart_toStartOf="@+id/buildStackGrandButton" />
+
+
+    <TextView
+        android:id="@+id/buildStackNotifText2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_bold"
+        android:letterSpacing="0"
+        android:shadowColor="@color/black"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="Stay tuned with best offers from our casino"
+        android:textColor="#ABFFFFFF"
+
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/buildStackSkipButton"
+        app:layout_constraintEnd_toEndOf="@+id/buildStackNotifText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/buildStackNotifText"
+        app:lineHeight="35dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

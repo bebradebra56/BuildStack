@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "354280503916",
+    "project_id": "buildstack-bf460",
+    "storage_bucket": "buildstack-bf460.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:354280503916:android:68bb4360edf098866db649",
+        "android_client_info": {
+          "package_name": "com.buidlstack.stacksubil"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2TYvbkCgWpoL5eSCkpFajp5XZZgUYEVM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
